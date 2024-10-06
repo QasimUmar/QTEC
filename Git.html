@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing Git Lab - Learning Project Guide</title>
+    <link rel="stylesheet" href="../styles.css"> <!-- Link to your CSS for styling -->
+</head>
+
+<body>
+    <header>
+        <h1>Introducing Git Lab - A Learning Project for Version Control</h1>
+    </header>
+
+    <section id="intro">
+        <h2>INTRODUCTION</h2>
+        <p>In this project, you'll learn to use a distributed version control system called Git. You'll also learn to connect to a VM instance, install Git, configure your Git user information, and perform basic Git operations like adding files, editing files, and committing changes.</p>
+        <a href="https://github.com/your-username/Introducing-Git-Lab" target="_blank">GitHub Project Repo</a>
+    </section>
+
+    <section id="objectives">
+        <h2>Lab Objectives</h2>
+        <ul>
+            <li>Create a Git repository</li>
+            <li>Add files to the repository</li>
+            <li>Edit the files</li>
+            <li>Commit the changes to the repository</li>
+        </ul>
+    </section>
+
+    <section id="lab-steps">
+        <h2>Step-by-Step Instructions</h2>
+        
+        <div class="lab-step">
+            <h3>Step 1: Install Git</h3>
+            <p>Run the following command to install Git on your Linux VM:</p>
+            <pre><code>sudo apt update
+sudo apt install git </code></pre>
+            <p>Verify the installation:</p>
+            <pre><code>git --version</code></pre>
+        </div>
+        
+        <div class="lab-step">
+            <h3>Step 2: Create a Git Repository</h3>
+            <p>Create a directory for your Git repository:</p>
+            <pre><code>mkdir my-git-repo
+cd my-git-repo</code></pre>
+            <p>Initialize a Git repository:</p>
+            <pre><code>git init</code></pre>
+        </div>
+
+        <div class="lab-step">
+            <h3>Step 3: Configure Git User Information</h3>
+            <p>Set up your username and email:</p>
+            <pre><code>git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"</code></pre>
+        </div>
+
+        <div class="lab-step">
+            <h3>Step 4: Create and Commit Files</h3>
+            <p>Create a file named <code>README</code> and add content:</p>
+            <pre><code>nano README</code></pre>
+            <p>Add and commit the changes:</p>
+            <pre><code>git add README
+git commit -m "Initial commit"</code></pre>
+        </div>
+
+        <div class="lab-step">
+            <h3>Step 5: View Commit Log</h3>
+            <p>View the commit history of the repository:</p>
+            <pre><code>git log</code></pre>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2>Additional Resources</h2>
+        <ul>
+            <li>GitHub Repository: <a href="https://github.com/your-username/Introducing-Git-Lab" target="_blank">Introducing Git Lab</a></li>
+            <li>YouTube Walkthrough Video: <a href="https://www.youtube.com/watch?v=link-to-tutorial" target="_blank">Watch the Lab Walkthrough</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>For more labs and projects, visit <a href="../index.html">our homepage</a>.</p>
+    </footer>
+</body>
+
+</html>
