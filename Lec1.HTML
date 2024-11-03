@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to NumPy - A Complete Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #006699;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 3px;
+            overflow-x: auto;
+        }
+        a {
+            color: #006699;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- YouTube Video Link -->
+    <p><strong>Watch the full video walkthrough here:</strong> <a href="https://youtu.be/ecxLuDe6VIc" target="_blank">Lecture 1 Part 1 Python Libraries and Modules</a></p>
+
+    <h1>Introduction to NumPy - A Complete Guide</h1>
+    <p>NumPy is a powerful Python library essential for data manipulation, scientific computing, and numerical analysis. This guide provides a step-by-step introduction to NumPy and explains the fundamentals you'll need to perform efficient computations on large datasets. Whether you're a beginner or refreshing your skills, this tutorial will serve as a valuable reference.</p>
+
+    <h2>Slide 1: Introduction to NumPy</h2>
+    <p><strong>What is NumPy?</strong></p>
+    <ul>
+        <li>NumPy is a powerful Python library for numerical computing.</li>
+        <li>Provides multidimensional arrays and matrix operations.</li>
+        <li>Essential for data manipulation and scientific calculations.</li>
+        <li>Commonly used for data analysis, machine learning, and more.</li>
+    </ul>
+    <p><em>Note:</em> "NumPy is one of the most popular Python libraries used for handling arrays and performing mathematical operations. In this video, we’ll explore how NumPy can make data processing faster and more efficient. Let's dive in!"</p>
+
+    <h2>Slide 2: Vectorization in NumPy</h2>
+    <p><strong>The Power of Vectorization</strong></p>
+    <ul>
+        <li>Vectorization allows operations across multiple data elements simultaneously.</li>
+        <li>Improves efficiency by reducing the need for explicit loops.</li>
+    </ul>
+    <p><strong>Example Code:</strong></p>
+    <pre><code># Using lists (non-vectorized)
+A = [1, 2, 3]
+B = [4, 5, 6]
+C = [A[i] * B[i] for i in range(len(A))]
+
+# Using NumPy (vectorized)
+import numpy as np
+A = np.array([1, 2, 3])
+B = np.array([4, 5, 6])
+C = A * B
+    </code></pre>
+    <p><em>Note:</em> "With vectorization, NumPy enables faster computation by operating on multiple elements at once, which is particularly valuable with large datasets."</p>
+
+    <h2>Slide 3: Importing and Aliasing NumPy</h2>
+    <p><strong>Importing and Aliasing</strong></p>
+    <ul>
+        <li>Standard practice is to import NumPy as <code>np</code>.</li>
+        <li>This aliasing saves time and makes code easier to read.</li>
+    </ul>
+    <p><strong>Example Code:</strong></p>
+    <pre><code>import numpy as np</code></pre>
+    <p><em>Note:</em> "Using the alias <code>np</code> is a standard convention in the Python community, making our code shorter and more readable."</p>
+
+    <h2>Slide 4: Arrays in NumPy</h2>
+    <p><strong>Creating NumPy Arrays</strong></p>
+    <ul>
+        <li>Core data structure in NumPy is the ndarray.</li>
+        <li>Supports one-dimensional, two-dimensional, and multi-dimensional arrays.</li>
+    </ul>
+    <p><strong>Examples:</strong></p>
+    <pre><code># 1D Array
+array_1d = np.array([1, 2, 3])
+
+# 2D Array
+array_2d = np.array([[1, 2, 3], [4, 5, 6]])
+
+# 3D Array
+array_3d = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+    </code></pre>
+    <p><em>Note:</em> "NumPy arrays, or ndarrays, can hold data in different dimensions. They’re similar to lists, but they allow more efficient manipulation."</p>
+
+    <h2>Slide 5: Checking Array Properties</h2>
+    <p><strong>Array Attributes</strong></p>
+    <ul>
+        <li><code>shape</code>: Dimensions of the array.</li>
+        <li><code>ndim</code>: Number of dimensions.</li>
+        <li><code>dtype</code>: Data type of the elements.</li>
+    </ul>
+    <p><strong>Example Code:</strong></p>
+    <pre><code>print(array_2d.shape)  # Output: (2, 3)
+print(array_2d.ndim)   # Output: 2
+print(array_2d.dtype)  # Output: int64
+    </code></pre>
+    <p><em>Note:</em> "Attributes like <code>shape</code>, <code>ndim</code>, and <code>dtype</code> help us understand an array’s structure and contents."</p>
+
+    <h2>Slide 6: Reshaping Arrays</h2>
+    <p><strong>Reshaping Arrays</strong></p>
+    <ul>
+        <li>Use <code>reshape()</code> to change array dimensions.</li>
+        <li>Helpful for organizing data.</li>
+    </ul>
+    <p><strong>Example Code:</strong></p>
+    <pre><code># Reshape 2D array to 4 rows and 2 columns
+array_reshaped = array_2d.reshape(4, 2)
+print(array_reshaped)
+    </code></pre>
+    <p><em>Note:</em> "Reshaping arrays is common in data analysis to adjust data layout without changing content."</p>
+
+    <h2>Slide 7: Common NumPy Functions</h2>
+    <p><strong>Useful NumPy Functions</strong></p>
+    <ul>
+        <li><code>np.mean()</code>: Calculates the mean.</li>
+        <li><code>np.log()</code>: Computes the natural logarithm.</li>
+        <li><code>np.floor()</code> and <code>np.ceil()</code>: Rounds down and up respectively.</li>
+    </ul>
+    <p><strong>Example Code:</strong></p>
+    <pre><code>print(np.mean(array_1d))  # Output: Mean of array
+print(np.log(array_1d))   # Natural log of elements
+print(np.floor(array_1d)) # Floor values
+print(np.ceil(array_1d))  # Ceil values
+    </code></pre>
+    <p><em>Note:</em> "NumPy provides many built-in functions to perform mathematical operations efficiently."</p>
+
+    <h2>Slide 8: Wrapping Up and Looking Ahead</h2>
+    <p><strong>Conclusion and Next Steps</strong></p>
+    <ul>
+        <li>NumPy is foundational for data manipulation in Python.</li>
+        <li>Mastering it enhances efficiency, especially with large datasets.</li>
+        <li>Upcoming topics: Pandas library, which builds on NumPy.</li>
+    </ul>
+    <p><em>Note:</em> "Understanding NumPy sets a strong foundation for data analysis. Next, we’ll see how libraries like Pandas depend on it."</p>
+
+</body>
+</html>
