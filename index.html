@@ -73,6 +73,28 @@
             list-style-type: square;
             margin-left: 20px;
         }
+        .video-wrapper {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping of video cards */
+            justify-content: space-around; /* Centers videos and adds spacing */
+            gap: 20px; /* Adds space between video cards */
+        }
+
+        .video-card {
+            flex: 1 1 300px; /* Makes each video card responsive */
+            max-width: 400px; /* Prevents videos from getting too wide */
+            text-align: center; /* Centers the title and description */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+            padding: 10px; /* Adds padding around the video card */
+            background-color: #f9f9f9; /* Matches the page background */
+            border-radius: 8px; /* Adds rounded corners */
+        }
+        iframe {
+            width: 100%; /* Makes the iframe fill the container */
+            height: 200px; /* Sets a consistent height for all videos */
+            border-radius: 8px; /* Matches the card's rounded corners */
+        }
+        
     </style>
 </head>
 <body>
